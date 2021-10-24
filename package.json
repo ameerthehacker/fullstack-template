@@ -10,6 +10,7 @@
     "start-server": "cross-env NODE_ENV=production npm run build-server && node server/dist/app.js",
     "watch-server": "tsc --project server/tsconfig.json --watch",
     "start-server-nodemon": "nodemon server/dist/app.js",
+    "start-debug-server-nodemon": "nodemon --inspect server/dist/app.js",
     "prettify": "pretty-quick --staged",
     "dev-server": "cross-env NODE_ENV=development npm run build-server && concurrently --kill-others npm:watch-server npm:start-server-nodemon"
   },
